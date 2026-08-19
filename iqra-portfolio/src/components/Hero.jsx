@@ -1,4 +1,5 @@
 import iqraImage from "../assets/iqra.jpg"
+
 function Hero() {
   return (
     <section
@@ -49,8 +50,10 @@ function Hero() {
           <div className="flex justify-center md:justify-end">
             <div className="relative">
 
+              {/* Glow behind image */}
               <div className="absolute inset-0 bg-cyan-400 rounded-full blur-3xl opacity-20"></div>
 
+              {/* Iqra's Photo */}
               <img
                 src={iqraImage}
                 alt="Iqra - Frontend Developer"

@@ -1,97 +1,19 @@
-// function Navbar() {
-//   return (
-//     <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
-//       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-
-//         <a href="#" className="text-2xl font-bold text-cyan-400">
-//           Iqra<span className="text-white">.</span>
-//         </a>
-
-//         <div className="hidden md:flex items-center gap-8 text-sm">
-//           <a href="#home" className="hover:text-cyan-400 transition">
-//             Home
-//           </a>
-
-//           <a href="#about" className="hover:text-cyan-400 transition">
-//             About
-//           </a>
-
-//           <a href="#skills" className="hover:text-cyan-400 transition">
-//             Skills
-//           </a>
-
-//           <a href="#projects" className="hover:text-cyan-400 transition">
-//             Projects
-//           </a>
-
-//           <a
-//             href="#contact"
-//             className="px-5 py-2 rounded-full bg-cyan-400 text-slate-950 font-semibold hover:bg-cyan-300 transition"
-//           >
-//             Contact
-//           </a>
-//         </div>
-
-//       </div>
-//     </nav>
-//   )
-// }
-
-// export default Navbar
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 py-6">
-        <div className="flex items-center justify-between">
-
-          <a
-            href="#home"
-            className="text-2xl font-bold text-white"
-          >
-            Iqra<span className="text-cyan-400">.</span>
-          </a>
-
-          <div className="hidden md:flex items-center gap-10">
-            <a
-              href="#home"
-              className="text-white hover:text-cyan-400 transition"
-            >
-              Home
-            </a>
-
-            <a
-              href="#about"
-              className="text-gray-300 hover:text-cyan-400 transition"
-            >
-              About
-            </a>
-
-            <a
-              href="#skills"
-              className="text-gray-300 hover:text-cyan-400 transition"
-            >
-              Skills
-            </a>
-
-            <a
-              href="#projects"
-              className="text-gray-300 hover:text-cyan-400 transition"
-            >
-              Projects
-            </a>
-
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-950 transition"
-            >
-              Contact
-            </a>
-          </div>
-
-        </div>
-      </div>
+    <nav className="flex justify-between items-center px-8 py-5 bg-zinc-900 border-b border-zinc-800">
+      <h1 className="text-xl font-bold flex items-center gap-2 text-white">
+        <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+        Iqra<span className="text-purple-500">Ahmad</span>
+      </h1>
+      <ul className="hidden md:flex gap-8 text-gray-300">
+        <li className="hover:text-purple-500 cursor-pointer">Home</li>
+       <li><a href="#about" className="hover:text-purple-500 cursor-pointer">About</a></li>
+        <li><a href="#skills" className="hover:text-purple-500">Skills</a></li>
+          <li><a href="#projects" className="hover:text-purple-500 transition">Projects</a></li>
+     <li><a href="#experience" className="hover:text-purple-500 transition">experience</a></li>
+         <li><a href="#contact" className="hover:text-purple-500 transition">contact</a></li>
+        
+      </ul>
     </nav>
   )
 }
-
-export default Navbar

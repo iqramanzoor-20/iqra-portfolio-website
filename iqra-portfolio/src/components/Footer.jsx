@@ -12,7 +12,7 @@ function Footer() {
         </p>
 
         <p className="text-gray-500 text-sm mt-6">
-          © 2026 Iqra. All rights reserved.
+          © 2026 Iqra
         </p>
 
       </div>

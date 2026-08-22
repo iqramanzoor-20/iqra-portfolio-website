@@ -2,13 +2,13 @@ export default function Experience() {
   const experiences = [
     {
       role: "Frontend Developer Intern",
-      company: "Company Name", // yahan apni company ka naam likho
-      duration: "Jul 2025 - Present",
+      company: "EncovaSolution", // yahan apni company ka naam likho
+      duration: "Jul 2026 - Present",
       description: "Working on responsive web applications using React, Tailwind CSS and JavaScript. Implementing UI components and optimizing performance for better user experience.",
     },
     {
       role: "Web Development Student",
-      company: "BSCS - Your University Name",
+      company: "BSCS - fazaia college of education for women peshawar", // 👈 yahan comma add kiya
       duration: "2023 - Present",
       description: "Learning modern frontend technologies including React, Tailwind CSS and JavaScript. Built 6+ projects including Portfolio, Landing Pages and Interactive Games.",
     }
@@ -33,7 +33,7 @@ export default function Experience() {
               <div className="absolute w-4 h-4 bg-cyan-400 rounded-full -left-2.5 mt-1.5"></div>
               
               {/* Card */}
-              <div className="bg-slate-900 p-6 rounded-xl border-white/10 hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300">
+              <div className="bg-slate-900 p-6 rounded-xl border border-white/10 hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300"> {/* 👈 yahan border add kiya */}
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                   <h3 className="text-xl font-bold text-white">{exp.role}</h3>
                   <span className="bg-cyan-400/10 text-cyan-400 text-xs px-3 py-1 rounded-full mt-2 sm:mt-0">{exp.duration}</span>

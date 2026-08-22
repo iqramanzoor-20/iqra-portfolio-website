@@ -1,84 +1,87 @@
-import { useState } from 'react'
+import { MapPin, Mail, Phone } from 'lucide-react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert("Message sent! I'll get back to you soon.")
-    setFormData({ name: '', email: '', message: '' })
-  }
-
   return (
-    <section id="contact" className="bg-slate-950 scroll-mt-20">
-      <div className="max-w-6xl mx-auto px-6 pt-20 pb-10">
-        
-        {/* Heading */}
+    <section id="contact" className="py-20 bg-black">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-cyan-400 uppercase tracking-[0.3em] text-xs font-semibold">Get In Touch</p>
+          <p className="text-cyan-400 uppercase tracking-[0.3em] text-xs font-semibold">GET IN TOUCH</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-3">Contact Me</h2>
           <div className="w-16 h-1 bg-cyan-400 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* 2 Column Grid */}
-        <div className="grid md:grid-cols-2 gap-10 mb-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-16"> {/* 👈 mb-16 add kiya map ke liye space */}
           
           {/* Left: Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <input type="text" required placeholder="Your Name"
-              value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})}
-              className="w-full bg-slate-900 border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-cyan-400"
-            />
-            <input type="email" required placeholder="Email Address"
-              value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full bg-slate-900 border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-cyan-400"
-            />
-            <textarea rows="5" required placeholder="Your Message"
-              value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})}
-              className="w-full bg-slate-900 border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-cyan-400 resize-none"
-            ></textarea>
-            <button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition">
+          <form className="space-y-4">
+            <input type="text" placeholder="Your Name" required
+              className="w-full bg-slate-900 border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" />
+            
+            <input type="email" placeholder="Email Address" required
+              className="w-full bg-slate-900 border border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" />
+            
+            <textarea placeholder="Your Message" rows="5" required
+              className="w-full bg-slate-900 border border-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition"></textarea>
+            
+            <button type="submit"
+              className="w-full bg-purple-600 hover:bg-purple-700 hover:scale-[1.02] text-white font-bold py-3 rounded-lg transition-all duration-300">
               Send
             </button>
           </form>
 
           {/* Right: Info */}
           <div className="space-y-6">
-            <div>
-              <h4 className="text-white font-semibold">Location</h4>
-              <p className="text-gray-400 text-sm">Peshawar, Khyber Pakhtunkhwa</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold">Email</h4>
-              <p className="text-gray-400 text-sm">your.email@example.com</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold">Phone</h4>
-              <p className="text-gray-400 text-sm">+92 3XX XXXXXXX</p>
+            <div className="flex items-start gap-4">
+              <MapPin className="text-cyan-400 mt-1" size={20} />
+              <div>
+                <h4 className="font-bold text-white">Location</h4>
+                <p className="text-gray-400">Peshawar, Khyber Pakhtunkhwa</p>
+              </div>
             </div>
 
-            {/* Follow Me - Simple Text Links */}
+            <div className="flex items-start gap-4">
+              <Mail className="text-cyan-400 mt-1" size={20} />
+              <div>
+                <h4 className="font-bold text-white">Email</h4>
+                <p className="text-gray-400">iqra@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <Phone className="text-cyan-400 mt-1" size={20} />
+              <div>
+                <h4 className="font-bold text-white">Phone</h4>
+                <p className="text-gray-400">+92 3452784293</p>
+              </div>
+            </div>
+
             <div className="pt-4">
-              <h4 className="text-white font-semibold mb-3">Follow Me</h4>
+              <h4 className="font-bold text-white mb-3">Follow Me</h4>
               <div className="flex gap-3">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" 
-                  className="bg-slate-900 hover:bg-cyan-400/10 px-4 py-2 rounded-lg text-cyan-400 border border-zinc-800">
-                  GitHub
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" 
-                  className="bg-slate-900 hover:bg-cyan-400/10 px-4 py-2 rounded-lg text-cyan-400 border border-zinc-800">
-                  LinkedIn
-                </a>
+                <a href="#" target="_blank" className="px-4 py-2 bg-slate-900 rounded-lg text-cyan-400 hover:bg-purple-500/20 border border-zinc-800 hover:border-purple-500 transition">GitHub</a>
+                <a href="#" target="_blank" className="px-4 py-2 bg-slate-900 rounded-lg text-cyan-400 hover:bg-purple-500/20 border-zinc-800 hover:border-purple-500 transition">LinkedIn</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* FOOTER */}
-      <div className="border-t border-zinc-800">
-        <div className="max-w-6xl mx-auto px-6 py-6 text-center">
-          <p className="text-gray-500 text-sm">© 2025 Created By Iqra. All rights reserved.</p>
+        {/* 👇 YE WALA MAP KA CODE HAI */}
+        <div className="rounded-xl overflow-hidden border border-zinc-800 mb-8">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105524.123!2d71.5249!3d34.0151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d917b90f0e79cf%3A0xa0f3b0c4c5b5b5b5!2sPeshawar%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2sPK!4v1690000000"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="grayscale hover:grayscale-0 transition duration-500"
+          ></iframe>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center text-gray-500 text-sm pt-8 border-t border-zinc-800">
+          © 2025 Created By Iqra. All rights reserved.
         </div>
       </div>
     </section>

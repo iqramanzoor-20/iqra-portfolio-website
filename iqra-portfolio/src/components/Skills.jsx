@@ -1,39 +1,39 @@
-import { Code, Palette, FileCode, Atom, Wind, LayoutGrid } from 'lucide-react'
+import { Code2, Palette, FileJson, Atom, Wind, LayoutGrid } from 'lucide-react'
 
 export default function Skills() {
   const skills = [
     {
-      icon: <Code className="w-10 h-10 text-orange-500" />,
+      icon: <Code2 className="text-orange-500" size={32} />,
       title: "HTML5",
       desc: "Structuring web pages with semantic and clean HTML code.",
       tags: ["Semantic Tags", "Forms", "Accessibility"]
     },
     {
-      icon: <Palette className="w-10 h-10 text-blue-500" />,
+      icon: <Palette className="text-blue-500" size={32} />,
       title: "CSS3",
       desc: "Styling beautiful and responsive websites with modern CSS.",
       tags: ["Flexbox", "Grid", "Animations"]
     },
     {
-      icon: <FileCode className="w-10 h-10 text-yellow-400" />,
+      icon: <FileJson className="text-yellow-400" size={32} />,
       title: "JavaScript",
       desc: "Adding interactivity and logic to make websites dynamic.",
       tags: ["ES6", "DOM", "Events"]
     },
     {
-      icon: <Atom className="w-10 h-10 text-cyan-400" />,
+      icon: <Atom className="text-cyan-400" size={32} />,
       title: "React",
       desc: "Building reusable UI components and single page applications.",
       tags: ["Hooks", "Components", "State"]
     },
     {
-      icon: <Wind className="w-10 h-10 text-teal-400" />,
+      icon: <Wind className="text-teal-400" size={32} />,
       title: "Tailwind CSS",
       desc: "Rapidly building modern designs with utility-first CSS.",
       tags: ["Responsive", "Utilities", "Dark Mode"]
     },
     {
-      icon: <LayoutGrid className="w-10 h-10 text-purple-500" />,
+      icon: <LayoutGrid className="text-purple-500" size={32} />,
       title: "Bootstrap",
       desc: "Creating responsive layouts quickly with Bootstrap components.",
       tags: ["Grid System", "Components", "Forms"]
@@ -41,30 +41,23 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="px-6 md:px-12 py-20 bg-black text-white">
-      <div className="max-w-6xl mx-auto">
-        
-        {/* Heading */}
+    <section id="skills" className="py-20 bg-black">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">My <span className="text-purple-500">Skills</span></h2>
-          <p className="text-gray-400">Technologies I am learning and working with</p>
+          <h2 className="text-4xl font-bold text-white">My <span className="text-purple-500">Skills</span></h2>
+          <p className="text-gray-400 mt-3">Technologies I am learning and working with</p>
+          <div className="w-16 h-1 bg-purple-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* 3x2 Grid Cards - Screenshot jese */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skill, index) => (
-            <div 
-              key={index}
-              className="bg-zinc-900 p-6 rounded-xl border-zinc-800 hover:border-purple-500 hover:scale-105 transition duration-300 group"
-            >
+        <div className="grid md:grid-cols-3 gap-6">
+          {skills.map((skill) => (
+            <div key={skill.title} className="group bg-zinc-900 p-6 rounded-xl border-zinc-800 hover:border-purple-500/50 hover:-translate-y-2 transition-all duration-300">
               <div className="mb-4 group-hover:scale-110 transition">{skill.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{skill.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-2">{skill.title}</h3>
               <p className="text-gray-400 text-sm mb-4">{skill.desc}</p>
-              
-              {/* Tags */}
               <div className="flex flex-wrap gap-2">
                 {skill.tags.map((tag) => (
-                  <span key={tag} className="bg-black px-3 py-1 rounded-full text-xs border border-zinc-800">
+                  <span key={tag} className="bg-black px-3 py-1 rounded-full text-xs text-gray-300 border-zinc-800">
                     {tag}
                   </span>
                 ))}
@@ -72,7 +65,6 @@ export default function Skills() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   )

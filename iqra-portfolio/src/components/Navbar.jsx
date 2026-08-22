@@ -10,8 +10,8 @@ export default function Navbar() {
        <li><a href="#about" className="hover:text-purple-500 cursor-pointer">About</a></li>
         <li><a href="#skills" className="hover:text-purple-500">Skills</a></li>
           <li><a href="#projects" className="hover:text-purple-500 transition">Projects</a></li>
-     <li><a href="#experience" className="hover:text-purple-500 transition">experience</a></li>
-         <li><a href="#contact" className="hover:text-purple-500 transition">contact</a></li>
+     <li><a href="#experience" className="hover:text-purple-500 transition">Experience</a></li>
+         <li><a href="#contact" className="hover:text-purple-500 transition">Contact</a></li>
         
       </ul>
     </nav>

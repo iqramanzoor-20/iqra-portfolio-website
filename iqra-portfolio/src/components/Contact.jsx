@@ -73,7 +73,7 @@ export default function Contact() {
               <div>
                 <h4 className="font-bold text-white">Email</h4>
                 <p className="text-gray-400">
-                  iqra@gmail.com
+                  iqramanzoorcsb@gmail.com
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function Contact() {
               <div>
                 <h4 className="font-bold text-white">Phone</h4>
                 <p className="text-gray-400">
-                  +92 3452784293
+                  +92 3179571682
                 </p>
               </div>
             </div>

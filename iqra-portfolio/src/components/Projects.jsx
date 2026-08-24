@@ -18,21 +18,21 @@ function Projects() {
       title: "Company Website",
       image: companyWebsite,
       description: "A simple website for a company.",
-      technologies: ["React", "Tailwind", "JS"],
+      technologies:["HTML", "CSS", "JS"],
     },
 
     {
       title: "My Portfolio",
       image: myPortfolio,
       description: "My personal website with my skills and work.",
-      technologies: ["React", "Tailwind", "JS"],
+      technologies:["HTML", "CSS", "JS"],
     },
 
     {
       title: "Smart Shop Website",
       image: smartShop,
       description: "A simple shopping website.",
-      technologies: ["React", "CSS", "JS"],
+      technologies: ["HTML", "CSS", "JS"],
     },
 
     {

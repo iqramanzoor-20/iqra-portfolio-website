@@ -37,7 +37,7 @@ export default function About() {
             <h3 className="text-lg font-bold mb-3 text-purple-400">Tech Stack</h3>
 
             <div className="flex flex-wrap gap-2">
-              {['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React', 'Git', 'GitHub'].map((skill) => (
+              {['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React', 'GitHub'].map((skill) => (
                 <span
                   key={skill}
                   className="bg-zinc-900 px-3 py-1 rounded-full text-sm border border-zinc-800 hover:border-purple-500 hover:text-purple-400 transition"
